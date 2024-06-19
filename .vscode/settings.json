@@ -65,6 +65,17 @@
         "utility": "cpp",
         "vector": "cpp",
         "__memory": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "*.tcc": "cpp",
+        "clocale": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
