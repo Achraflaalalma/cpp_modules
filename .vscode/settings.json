@@ -76,6 +76,8 @@
         "numbers": "cpp",
         "semaphore": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "unistd.h": "c",
+        "stdio.h": "c"
     }
 }

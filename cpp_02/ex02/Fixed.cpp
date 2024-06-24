@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lfrida <lfrida@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:26:56 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/04/26 18:09:54 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/06/20 22:16:19 by lfrida           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ Fixed Fixed::operator*(const Fixed& rhs) const {
 Fixed Fixed::operator/(const Fixed& rhs) const {
     return Fixed(this->toFloat() / rhs.toFloat());
 }
-// 1/25
+
 /// @brief Increment and decrement operators
 
 Fixed& Fixed::operator++() {
