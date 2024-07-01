@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 16:03:41 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/01 12:07:26 by alaalalm         ###   ########.fr       */
+/*   Created: 2024/04/21 19:49:39 by alaalalm          #+#    #+#             */
+/*   Updated: 2024/06/26 02:08:57 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
+#include "Point.hpp"
 
-Zombie  *zombieHorde( int N, std::string name ) {
-    
-    Zombie *zombies;
-
-    zombies = new Zombie[N];
-    for (int i = 0; i < N; ++i) {
-        zombies[i].set_Name(name);
-    }
-    return zombies;
+int main(void) 
+{
+    if (bsp(Point(0, 0), Point(0, 4), Point(4, 0), Point(0, 4)))
+        std::cout << "The point is inside the triangle" << std::endl;
+    else
+        std::cout << "The point is outside the triangle" << std::endl;
 }

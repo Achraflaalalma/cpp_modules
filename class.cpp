@@ -80,11 +80,25 @@
 
 // };
 
+#include <iostream>
+#include <string>
 
-int main()
-{
-	
+int main() {
+    std::string str = "Hello, worldbnbb bhvghfguvg";
+    std::string substr = "world";
 
-	return 0;
+    size_t found = str.find(substr);
+
+    if (found != std::string::npos) {
+        std::cout << "Substring '" << substr << "' found at position " << found << std::endl;
+        // Here, found != std::string::npos evaluates to true
+    } else {
+        std::cout << "Substring '" << substr << "' not found in the string." << std::endl;
+        // Here, found != std::string::npos evaluates to false
+    }
+
+    return 0;
 }
-01000001100010010000000000000000         131,589824
+
+
+

@@ -12,7 +12,7 @@ int main(int ac, char **av)
     return (std::cerr << RED <<"Too many arguments\n" << RESET, false);
   i = 0;
   clients.print_menu();
-  while (std::cin >> line && line != "EXIT")
+  while (std::getline(std::cin, line) && line != "EXIT")
   {
       clients.clear_input();
       clients.clear_screen();

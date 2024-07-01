@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:26:56 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/06/25 23:55:15 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/06/26 00:05:26 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 // Default constructor
 Fixed::Fixed() : fixed_point(0) {
-    std::cout << "Default constructor called" << std::endl;
+    //std::cout << "Default constructor called" << std::endl;
 }
 
 // Constructor with an integer argument
 Fixed::Fixed(const int integer) : fixed_point(integer << fractionalBits) {
-    std::cout << "Int Constructor called" << std::endl;
+    //std::cout << "Int Constructor called" << std::endl;
 }
 
 // Constructor with a float argument
 Fixed::Fixed(float number) : fixed_point(roundf(number * (1 << fractionalBits))) {
-    std::cout << "Float constructor called" << std::endl;
+    //std::cout << "Float constructor called" << std::endl;
 }
 
 // Copy constructor
 Fixed::Fixed(const Fixed& rhs) : fixed_point(rhs.fixed_point) {
-    std::cout << "Copy constructor called" << std::endl;
+    //std::cout << "Copy constructor called" << std::endl;
 }
 
 /// @brief Comparison operators
@@ -105,7 +105,7 @@ Fixed& Fixed::operator=(const Fixed& rhs) {
     if (this != &rhs) {
     this->fixed_point = rhs.fixed_point;
     }
-    std::cout << "Copy assignment operator called" << std::endl;
+    //std::cout << "Copy assignment operator called" << std::endl;
     return *this;
 }
 
@@ -138,7 +138,7 @@ int Fixed::toInt(void) const {
 
 // Destructor
 Fixed::~Fixed(){
-    std::cout << "Destructor called" << std::endl;
+    //std::cout << "Destructor called" << std::endl;
 }
 
 // Output stream operator
@@ -151,7 +151,7 @@ std::ostream& operator<<(std::ostream& os, const Fixed& obj) {
 // Getters and setters
 
 int Fixed::getRawBits(void) const {
-    std::cout << "getRawBits member function called" << std::endl;
+    //std::cout << "getRawBits member function called" << std::endl;
     return this->fixed_point;
 }
 

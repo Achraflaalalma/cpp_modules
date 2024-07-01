@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:49:05 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/04/19 22:22:20 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/01 11:53:30 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void    randomChump(std::string name);
 Zombie  *newZombie(std::string name);
 
 #endif
-

@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 10:32:51 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/05/31 18:48:05 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/01 10:08:17 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ bool PhoneBook::all_alpha(const std::string &line) {
 
 bool PhoneBook::all_digit(const std::string &line, int flag) {
     if (flag == 1) {
-        if (line.length() != 10)
+        if (!all_digit(line, 0) || line.length() != 10)
             return false;
     }
     else

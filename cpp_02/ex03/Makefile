@@ -1,10 +1,10 @@
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 RM = rm -f
-HEADERS = Fixed.hpp
-SRCS = main.cpp Fixed.cpp
+HEADERS = Fixed.hpp  Point.hpp
+SRCS = main.cpp Fixed.cpp bsp.cpp  Point.cpp
 OBJS = $(SRCS:.cpp=.o)
-NAME = Fixed_point_2
+NAME = BSP
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:13:41 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/04/19 19:11:01 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/01 12:59:33 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,18 @@ class Weapon
 {
 private:
     std::string type;
-public:
-    // setters
-    void setType(std::string param);
-
-    //getters
-    std::string &getType(void);
-
-    // Default constructor
-    Weapon(void){};
-    
+public:    
     // Constructor
     Weapon(std::string param);
 
     // destrucor
     ~Weapon();
+    
+    // setter
+    void setType(std::string param);
+
+    //getter
+    const std::string& getType(void);
+
 };
 #endif

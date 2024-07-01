@@ -29,8 +29,7 @@ void not_in_range(PhoneBook &clients)
 {
     std::cout << CLEAR_SCREEN;
     std::cout << RED << "Invalid" << RESET
-              << " index -> not in range, choose another"
-              << std::endl;
+              << " index -> not in range" << std::endl;
     display_table(clients);
 }
 
@@ -41,15 +40,11 @@ void prompt_user_for_entry(PhoneBook &clients)
   std::cout << "Choose " << BLUE << "Contact" << RESET << " to be displayed according to it\'s index" << std::endl;
   do {
       std::string input;
-      if (std::cin >> input) {
-        clients.clear_input();
-        if (input == "EXIT")
-            exit(EXIT_SUCCESS);
-      } else {
-        exit(EXIT_FAILURE);
-      }
-      if (clients.all_digit(input, 0)) {
-        index = std::stoi(input);
+      std::getline(std::cin, input);
+      if (input == "EXIT" || std::cin.eof())
+        exit(EXIT_SUCCESS);
+      if (input.length() == 1 && std::isdigit(input[0])) { 
+        index = input[0] - '0';
         if (index >= 0 && index < PhoneBook::entry)
         {
           std::cout << CLEAR_SCREEN;

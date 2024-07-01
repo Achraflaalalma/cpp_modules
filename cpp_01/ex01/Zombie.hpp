@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:49:05 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/04/12 18:21:18 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/01 12:08:43 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     void announce(void);
     
     // Default constructor
-    Zombie(){}
+    Zombie();
     
     // Constructor with name parameter
     Zombie(std::string z_name);

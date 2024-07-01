@@ -22,7 +22,6 @@ void PhoneBook::add_contact(PhoneBook &clients, std::string line, int &i)
 {
   std::string fields[] = {"first name", "last name", "darkest secret", "nickname", "phone number"};
 
-  std::cin.ignore();
   for (int j = 0; j < 5; j++) {
     do {
         std::cout << BLUE << "Enter" << RESET << " your " << fields[j] << ": " << std::endl;
