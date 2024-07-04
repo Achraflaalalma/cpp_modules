@@ -6,14 +6,14 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 10:32:51 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/01 10:08:17 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:41:15 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "PhoneBook.hpp"
 
-bool PhoneBook::all_alpha(const std::string &line) {
+bool all_alpha(const std::string &line) {
     for (size_t i = 0; i < line.length(); ++i) {
         if (!std::isalpha(line[i]) && line[i] != ' ')
             return false;
@@ -21,7 +21,7 @@ bool PhoneBook::all_alpha(const std::string &line) {
     return true;
 }
 
-bool PhoneBook::all_digit(const std::string &line, int flag) {
+bool all_digit(const std::string &line, int flag) {
     if (flag == 1) {
         if (!all_digit(line, 0) || line.length() != 10)
             return false;
@@ -46,12 +46,12 @@ void PhoneBook::print_menu(void)
   std::cout << "-----------------------------------------------------" << std::endl;
 }
 
-void    PhoneBook::clear_screen(void)
+void    clear_screen(void)
 {
     std::cout << CLEAR_SCREEN;
 }
 
-void    PhoneBook::clear_input(void)
+void    clear_input(void)
 {
     std::cout << MOVE_CURSOR_UP << CLEAR_LINE;
 }

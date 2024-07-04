@@ -68,13 +68,13 @@ void prompt_user_for_entry(PhoneBook &clients)
 void PhoneBook::search_for_contact(PhoneBook &clients)
 {
   if (!PhoneBook::entry) {
-    clients.clear_screen();
+    clear_screen();
     std::cout << "No " << BLUE << "Contacts" << RESET << " have been added" << std::endl;
     clients.print_menu();
     return ;
   }
   else {
-  clients.clear_screen();
+  clear_screen();
   display_table(clients);
   }
   prompt_user_for_entry(clients);

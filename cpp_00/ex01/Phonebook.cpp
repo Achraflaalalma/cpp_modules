@@ -14,8 +14,8 @@ int main(int ac, char **av)
   clients.print_menu();
   while (std::getline(std::cin, line) && line != "EXIT")
   {
-      clients.clear_input();
-      clients.clear_screen();
+      clear_input();
+      clear_screen();
       if (line == "ADD")
         clients.add_contact(clients, line, i);
       else if (line == "SEARCH")
@@ -23,5 +23,5 @@ int main(int ac, char **av)
       else
         clients.print_menu();
   }
-  clients.clear_input();
+  clear_input();
 }

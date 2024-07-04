@@ -22,14 +22,14 @@ public:
     static const int MAX_CONTACTS = 8;
     static int entry;
     Contact contacts[MAX_CONTACTS];
-    bool        all_alpha(const std::string &line);
-    bool        all_digit(const std::string &line, int flag);
     void        add_contact(PhoneBook &clients, std::string line, int &i);
     void        search_for_contact(PhoneBook &clients);
     void        print_menu(void);
-    void        clear_screen(void);
-    void        clear_input(void);
     PhoneBook(void);
     ~PhoneBook(void);
 };
+    bool        all_alpha(const std::string &line);
+    bool        all_digit(const std::string &line, int flag);
+    void        clear_screen(void);
+    void        clear_input(void);
 #endif
