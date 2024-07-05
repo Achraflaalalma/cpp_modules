@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 19:58:29 by lfrida            #+#    #+#             */
-/*   Updated: 2024/07/01 11:33:42 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/05 20:35:48 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,13 +110,14 @@ bool	Account::makeWithdrawal( int withdrawal )
   Account::_displayTimestamp();
   std::cout << " index:" << _accountIndex << ";"
             << "p_amount:" << _amount << ";"
-            << "withdrawal:" << withdrawal << ";";
+            << "withdrawal:";
   if (_amount < withdrawal)
   {
     std::cout << "refused" << std::endl;
     return false;
   }
-  _amount -= withdrawal;
+  std::cout << withdrawal << ";";
+  _amount -= withdrawal;                                                                                                                                            
   Account::_totalAmount -= withdrawal;
   Account::_totalNbWithdrawals++;
   _nbWithdrawals++;
