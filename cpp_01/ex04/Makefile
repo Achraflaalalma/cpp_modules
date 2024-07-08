@@ -2,7 +2,7 @@ CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror 
 RM = rm -f
 HEADERS = header.hpp
-SRCS = main.cpp replace.cpp
+SRCS = main.cpp replace.cpp error.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = Sed
 

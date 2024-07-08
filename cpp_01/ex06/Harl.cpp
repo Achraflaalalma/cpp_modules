@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 12:31:49 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/06 15:47:01 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/08 09:29:25 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level) {
     
-
+    ComplaintHandler handler[] = { &Harl::debug,
+                                            &Harl::info,
+                                            &Harl::warning,
+                                            &Harl::error};
     std::string param[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int index = -1;
 
@@ -63,13 +66,13 @@ void Harl::complain(std::string level) {
   
     switch (index) {
         case 0:
-            debug();
+            (this->*handler[0])();
         case 1:
-            info();
+            (this->*handler[1])();
         case 2:
-            warning();
+            (this->*handler[2])();
         case 3:
-            error();
+            (this->*handler[3])();
     }  
 }
 

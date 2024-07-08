@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:55:23 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/06 11:38:15 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/07/06 19:28:07 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ public:
     ~HumanB();
 
     void attack(void);
-    void setWeapon(Weapon &weapon);
+    void setWeapon(Weapon& weapon);
 };
 #endif
