@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 23:40:09 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/09/20 12:21:44 by alaalalm         ###   ########.fr       */
+/*   Created: 2024/07/14 10:19:44 by alaalalm          #+#    #+#             */
+/*   Updated: 2024/07/14 10:20:08 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#pragma once
 
-#include "ClapTrap.hpp"
+#include "AForm.hpp"
 
-class ScavTrap :  public ClapTrap {
+class PresidentialPardonForm : public AForm
+{
 private:
-    // Default constructor
-    ScavTrap();
+    std::string target;
 public:
-    // Constructor
-    ScavTrap(std::string name);
-
-    // Destructor
-    ~ScavTrap();
-
-    void attack(const std::string& target);
-    void guardGate();
+    PresidentialPardonForm();
+    PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(const PresidentialPardonForm &rhs);
+    PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
+    ~PresidentialPardonForm();
+    void execute(Bureaucrat const &executor) const;
 };
-#endif

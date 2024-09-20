@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 18:23:27 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/09/20 12:21:15 by alaalalm         ###   ########.fr       */
+/*   Created: 2024/07/10 17:58:49 by alaalalm          #+#    #+#             */
+/*   Updated: 2024/09/20 17:58:17 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#include "Form.hpp"
 
 int main()
 {
-    DiamondTrap diamondTrap("DiamondTrap");
-    // diamondTrap.attack("target");
-    // diamondTrap.takeDamage(10);
-    // diamondTrap.beRepaired(10);
-    // diamondTrap.guardGate();
-    // diamondTrap.highFivesGuys();
-    // diamondTrap.whoAmI();
+    try {
+        Bureaucrat  b("B", 1);
+        Form        f("F", false, 0, 1);
+        b.signForm(f);
+        std::cout << b << std::endl;
+        std::cout << f;
+    }
+    catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 00:59:44 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/04/27 10:04:15 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/09/20 18:07:01 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,25 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attakDamage = 20;
-    
 }
 
+
+// Copy constructor
+ScavTrap::ScavTrap(const ScavTrap& scavtrap) {
+    std::cout << "ScavTrap Copy constructor called" << std::endl;
+    *this = scavtrap;
+}
+
+// Assignment operator
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& scavtrap) {
+    std::cout << "ScavTrap Assignment operator called" << std::endl;
+    this->name = scavtrap.name;
+    this->hitPoints = scavtrap.hitPoints;
+    this->energyPoints = scavtrap.energyPoints;
+    this->attakDamage = scavtrap.attakDamage;
+    return *this;
+}
 // attack function
 void ScavTrap::attack(const std::string& target) {
     if (this->energyPoints ==  0 || this->hitPoints <= 0)

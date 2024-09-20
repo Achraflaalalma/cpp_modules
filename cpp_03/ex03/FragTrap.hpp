@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 10:35:40 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/10 10:42:08 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:21:47 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-class FragTrap : virtual public ClapTrap
+class FragTrap :  public ClapTrap
 {
     public:
         FragTrap();

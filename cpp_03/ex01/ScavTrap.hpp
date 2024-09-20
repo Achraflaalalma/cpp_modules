@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 23:40:09 by alaalalm          #+#    #+#             */
-/*   Updated: 2024/07/01 16:08:25 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/09/20 18:06:30 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ public:
 
     // Constructor
     ScavTrap(std::string name);
+
+    // Copy constructor
+    ScavTrap(const ScavTrap& scavtrap);
+
+    // Assignment operator
+    ScavTrap& operator=(const ScavTrap& scavtrap);
 
     // Destructor
     ~ScavTrap();
